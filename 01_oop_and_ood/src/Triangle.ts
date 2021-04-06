@@ -4,23 +4,11 @@ import { Shape } from './Shape';
 export class Triangle extends Shape {
     constructor(point1: Point, point2: Point, point3: Point)
     constructor(point1: Point, point2: Point, point3: Point, color: string, filled: boolean)
-    constructor(...args: any[]) {
-        if (args.length === 3 &&
-             args[0] instanceof Point &&
-             args[1] instanceof Point &&
-             args[2] instanceof Point) { 
-            super([args[0], args[1], args[2]])
-        } else if (
-            args.length === 5 && 
-            args[0] instanceof Point &&
-            args[1] instanceof Point &&
-            args[2] instanceof Point &&
-            typeof args[1] === 'string' &&
-            typeof args[2] === 'boolean'
-            ) { 
-            super([args[0], args[1], args[2]], args[3], args[4])
-        } else { 
-            throw new Error('Invalid arguments.') 
+    constructor(point1: Point, point2: Point, point3: Point, color?: string, filled?: boolean) {
+        if(color && filled) {
+            super([point1, point2, point3], color, filled);
+        } else {
+            super([point1, point2, point3])
         } 
     }
 
