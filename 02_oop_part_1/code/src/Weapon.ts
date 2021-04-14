@@ -20,15 +20,15 @@ export abstract class Weapon extends Item {
        this.effectiveDurability = this.baseDurability + this.durabilityModifier;
     }
 
-    getDamage() {
+    getDamage(): number {
         return this.effectiveDamage;
     }
 
-    getDurability() {
+    getDurability(): number {
         return this.effectiveDurability;
     }
 
-    toString() {
+    toString(): string {
         return `${this.name} - 
         Value: ${this.value}, 
         Weight: ${this.weight}, 
@@ -36,7 +36,7 @@ export abstract class Weapon extends Item {
         Durability: ${this.getDurability() * 100}%`
     }
 
-    use() {
+    use(): string {
         let message;
         if(this.getDurability() > 0) {
             this.effectiveDurability -= this.MODIFIER_CHANGE_RATE;

@@ -9,7 +9,7 @@ export class Consumable extends Item {
         this.spoiled = spoiled;
     }
 
-    use() {
+    use(): string {
         if(!this.isSpoiled() && !this.isConsumed()) {
             this.eat()
         } else {
@@ -17,7 +17,7 @@ export class Consumable extends Item {
         }
     }
 
-    eat() {
+    eat(): string {
         this.setConsumed(true);
         return this.isSpoiled() ? `You eat the  ${this.name}. You feel sick.` : `You eat the  ${this.name}.`;
     }
@@ -26,11 +26,11 @@ export class Consumable extends Item {
         return this.consumed;
     }
 
-    setConsumed(consumed: boolean) {
+    setConsumed(consumed: boolean): void {
         this.consumed = consumed;
     }
 
-    isSpoiled() {
+    isSpoiled(): boolean {
         return this.spoiled;
     }
 }

@@ -6,7 +6,7 @@ export abstract class Bow extends Weapon {
         super('bow', baseDamage, baseDurability, value, weight)
     }
 
-    polish() {
+    polish(): void {
         if(this.durabilityModifier < 1) {
             this.durabilityModifier += this.MODIFIER_CHANGE_RATE;
         } else {

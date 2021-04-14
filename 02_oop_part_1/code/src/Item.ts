@@ -24,7 +24,7 @@ export abstract class Item implements Comparable<Item> {
          this.value > other.value ? 1 : -1;
     }
 
-    toString() {
+    toString(): string {
         return `${this.name} - Value: ${this.value}, Weight: ${this.weight}`
     }
 
@@ -34,19 +34,19 @@ export abstract class Item implements Comparable<Item> {
     
     abstract use(): void;
 
-    getId() {
+    getId(): number {
         return this.id;
     }
 
-    getValue() {
+    getValue(): number {
         return this.value;
     }
 
-    getName() {
+    getName(): string {
         return this.name;
     }
 
-    getWeight() {
+    getWeight(): number {
         return this.weight;
     }
 
@@ -61,5 +61,4 @@ export abstract class Item implements Comparable<Item> {
     setWeight(weight: number): void {
         this.weight = weight;
     }
-
 }
