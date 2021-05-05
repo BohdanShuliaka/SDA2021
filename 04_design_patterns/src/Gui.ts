@@ -5,6 +5,10 @@ export class Gui implements GuiInterface {
     state: IShipment;
     listener;
 
+    constructor(state: IShipment) {
+        this.state = state;
+    }
+
     onEvent(eventType: string, callback: (state: IShipment) => void) {
         this.listener = {[eventType]: callback }
     }

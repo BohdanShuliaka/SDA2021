@@ -22,7 +22,8 @@ const mock2 = {
     marks: ['Fragile'],
 }
 
-const gui = new Gui();
+const gui = new Gui(mock);
 const client = new Client(gui);
-gui.trigger('ship', mock);
-gui.trigger('ship', mock2);
+
+const gui2 = new Gui(mock2);
+const client2 = new Client(gui2);

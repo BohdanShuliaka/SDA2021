@@ -12,6 +12,7 @@ export class Client {
     constructor(gui: Gui) {
         this.gui = gui;
         gui.onEvent('ship', this.onShip);
+        gui.trigger('ship', this.gui.state)
     }
 
     onShip(shipment: IShipment) {
