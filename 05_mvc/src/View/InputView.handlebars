@@ -1,0 +1,20 @@
+ {{#each values}}
+<div class="curr_box">
+    <div>Name: {{ pairedCurr.name }}</div>
+    <div class="curr-init-rate">
+        <span>1 {{ initialCurr.name }} is</span>
+        <input type="text" class="curr-rate-input" value="{{ pairedCurr.rate }}" disabled>
+        <span>{{ pairedCurr.code }}</span>
+    </div>
+    <div class="curr-exchange-box">
+        <div class="curr-base-value">
+            <div>{{ initialCurr.name }}</div>
+            <input type="text" class="curr-base-rate-input {{ pairedCurr.code }}-direct" value="{{ initialCurr.quantity }}">
+        </div>
+        <div class="curr-paired-value">
+            <div>{{ pairedCurr.code }}</div>
+            <input type="text" class="curr-paired-rate-input" value="{{ pairedCurr.quantity }}" disabled>
+        </div>
+    </div>
+</div>
+{{/each}}
