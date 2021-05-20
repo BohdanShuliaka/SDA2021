@@ -1,0 +1,56 @@
+.inputWrapper {
+    background-color: blanchedalmond;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.sliderWrapper {
+    background-color: blanchedalmond;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.curr_box {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid cornflowerblue;
+}
+
+.curr-exchange-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.curr-base-value {
+    margin-right: 25px;
+}
+
+.curr-init-rate,
+.curr-exchange-box {
+    padding: 10px 0 10px 0;
+}
+
+.radio_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+.inputView_box,
+.sliderView_box {
+    padding-top: 10px;
+}
+
+input[type=radio] {
+    transform: scale(1.5);
+}
+
+input[type=range] {
+    width: 300px;
+}

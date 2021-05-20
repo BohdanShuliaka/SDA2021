@@ -1,0 +1,18 @@
+{{#each values}}
+<div class="curr_box">
+    <div>Name: {{ pairedCurr.name }}</div>
+    <div class="curr-init-rate">
+        <span>1 {{ initialCurr.name }} is {{ pairedCurr.rate }} {{ pairedCurr.code }}</span>
+    </div>
+    <div class="curr-exchange-box">
+        <div class="curr-base-value">
+            <div>{{ initialCurr.name }}: {{ initialCurr.quantity }}</div>
+            <input type="range" min="0" max="10000" class="curr-base-rate-input {{ pairedCurr.code }}-direct" value="{{ initialCurr.quantity }}">
+        </div>
+        <div class="curr-paired-value">
+            <div>{{ pairedCurr.code }}: {{ pairedCurr.quantity }}</div>
+            <input type="range" min="0" max="10000" class="curr-paired-rate-input {{ pairedCurr.code }}-reversed" value="{{ pairedCurr.quantity }}" >
+        </div>
+    </div>
+</div>
+{{/each}}
