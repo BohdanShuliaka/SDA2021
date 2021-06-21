@@ -8,6 +8,7 @@
 # dependencies
 /node_modules
 **/node_modules
+/06_clean_code
 
 # IDEs and editors
 /.idea
