@@ -15,12 +15,6 @@ class PriorityQueue {
         this.values = []
     }
 
-    swap(index1, index2) {
-        let temp = this.values[index1];
-        this.values[index1] = this.values[index2];
-        this.values[index2] = temp;
-    }
-
     enqueue(qElement) {
         var contain = false;
     
